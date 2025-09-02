@@ -9,7 +9,7 @@ function waitTimeToLoginPage(){
 export default function LandingPage() {
     waitTimeToLoginPage();
     return (
-        <div style={{padding: 24}}>
+        <div class = "text-3xl font-bold underline">
             <h1>Welcome to DnD Campaign Companion</h1>
         </div>
     );
