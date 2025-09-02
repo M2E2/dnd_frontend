@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "https://dnd-backend-l8v7.onrender.com/api/$1" }
+  ]
+}
