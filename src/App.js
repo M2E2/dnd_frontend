@@ -5,13 +5,12 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import RequireAuth from "./auth/RequireAuth";
 
-import './App.css';
+import './styles/App.css';
 
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Login />} />
       <Route path="/home" element={<RequireAuth><Home /></RequireAuth>} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

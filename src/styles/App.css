@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.inria-sans-light {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inria-sans-regular {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inria-sans-bold {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inria-sans-light-italic {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.inria-sans-regular-italic {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.inria-sans-bold-italic {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.login_Page{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: black;
+}
+
+.login_Frame {
+  /* controlli il bordo con questa variabile */
+  --bw: 14px;         /* spessore del bordo (anello) */
+  --r: 24px;          /* raggio esterno */
+
+  position: relative;
+  /* width: min(420px, 90vw); */
+  padding: var(--bw);         /* crea l’anello */
+  border-radius: var(--r);
+}
+
+.login_FX {
+  position: absolute;
+  inset: 0;                   /* riempi tutto il frame */
+  border-radius: var(--r);
+  overflow: hidden;           /* clip agli angoli arrotondati */
+  pointer-events: none;
+  z-index: 0;
+}
+/* Il tuo ShapeBlur genera un <div> con il canvas: fallo riempire */
+.login_FX > div { width: 100%; height: 100%; }
+
+.login_Box {
+  position: relative;
+  z-index: 1;
+  border-radius: calc(var(--r) - var(--bw));  /* raggio interno */
+  background: rgba(255,255,255,0.14);         /* fondo della card */
+  backdrop-filter: blur(8px);                 /* opzionale “vetro” */
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inputBox {
+  width: 80%;              /* occupa l’80% del box login */
+  max-width: 300px;        /* ma non diventa troppo larga */
+  padding: 0.75rem 1rem;   /* spaziatura interna */
+  background: #ffffff44;
+  border-radius: 12px;
+  border-width: 1px;
+  border-radius: 25px;
+  border-color: #fff;      /* bordo grigio chiaro */
+  display: flex;             /* per centrare l’input se serve */
+  align-items: center;
+}
+
+.inputBox input {
+  flex: 1;                 /* prende tutto lo spazio disponibile */
+  border: none;            /* niente bordo nativo */
+  outline: none;           /* niente alone blu */
+  font-size: 1rem;
+  color: white;
+  background: transparent; /* usa il bg della .inputBox */
+}
+
+.buttonRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+
+.buttonLogin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 60%;
+  font-family: "Inria Sans", sans-serif;
+  background-color: #ffffff44;
+  color: white;
+  border-width: 1px;
+  border-color: #fff;   
+  border-radius: 25px;
+}
+
+.title{
+  font-size: 2em;
+  font-weight: regular;
+  font-family: 'Inria Sans', sans-serif;
+  color: white;
+}
+
+.light-rays-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.suggestions{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* gap: 10px; */
+}

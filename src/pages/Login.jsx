@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useAuth } from '../auth/AuthContext';
 import { useNavigate, useLocation } from 'react-router-dom';
 import LoginBox from '../components/LoginBox';
+import LoginCavern from '../components/LoginCavern';
+import '../styles/App.css';
 
 export default function Login() {
     const { login }  = useAuth();
@@ -24,8 +26,8 @@ export default function Login() {
     }
 
     return (
-        <div className='min-h-screen flex items-center justify-center bg-slate-800 '>
-        <LoginBox
+        <div className ="login_Page">
+        <LoginCavern
             email={email}
             setEmail={setEmail}
             password={password}
